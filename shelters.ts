@@ -1,4 +1,4 @@
-interface Shelter {
+export interface Shelter {
     description: string;
     latitude: string;
     longitude: string;
