@@ -6,18 +6,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WeatherModule = void 0;
+exports.LogserviceService = void 0;
 const common_1 = require("@nestjs/common");
-const weather_service_1 = require("./weather.service");
-const weather_controller_1 = require("./weather.controller");
-const shelter_module_1 = require("src/shelter/shelter.module");
-let WeatherModule = class WeatherModule {
+let LogserviceService = class LogserviceService {
 };
-WeatherModule = __decorate([
-    (0, common_1.Module)({
-        providers: [shelter_module_1.ShelterModule, weather_service_1.WeatherService],
-        controllers: [weather_controller_1.WeatherController]
-    })
-], WeatherModule);
-exports.WeatherModule = WeatherModule;
-//# sourceMappingURL=weather.module.js.map
+LogserviceService = __decorate([
+    (0, common_1.Injectable)()
+], LogserviceService);
+exports.LogserviceService = LogserviceService;
+//# sourceMappingURL=logservice.service.js.map

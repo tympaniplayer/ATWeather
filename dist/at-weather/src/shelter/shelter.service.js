@@ -10,6 +10,16 @@ exports.ShelterService = void 0;
 const common_1 = require("@nestjs/common");
 const shelter_entity_1 = require("./entities/shelter.entity");
 let ShelterService = class ShelterService {
+    findOne(id) {
+        const shelter = shelter_entity_1.ShelterLocations[id + 1];
+        const location = {
+            Id: id,
+            Longitude: shelter.Latitude,
+            Latitude: shelter.Latitude,
+            Description: shelter.Description
+        };
+        return location;
+    }
     findAll() {
         return shelter_entity_1.ShelterLocations.map((shelter, index) => {
             const location = {
